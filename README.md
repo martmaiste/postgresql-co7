@@ -2,6 +2,7 @@ dockerfiles-centos-postgres
 ===========================
 
 Dockerfile to build PostgreSQL on CentOS 7
+
 Meant for porting or migrating PostgreSQL databases from CentOS 7 servers to Docker enviroment
 
 
@@ -39,5 +40,5 @@ martmaiste/postgresql-co7
 
 To connect to your database with your newly created user:
 ```
-psql -U username -h $(docker inspect --format {{.NetworkSettings.IPAddress}} postgresql-co7)
+psql -U username -h $(docker inspect --format {{.NetworkSettings.IPAddress}} postgresql-co7) my_database
 ```
