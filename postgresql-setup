@@ -81,7 +81,7 @@ perform_initdb(){
     fi
 
     # Initialize the database
-    $SU -l postgres -c "$PGENGINE/initdb --pgdata='$PGDATA' --auth='ident'" \
+    $SU -l postgres -c "$PGENGINE/initdb -E UTF8 --pgdata='$PGDATA' --auth='ident'" \
                     >> "$PGLOG" 2>&1 < /dev/null
 
     # Create directory for postmaster log files
