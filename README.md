@@ -40,5 +40,5 @@ martmaiste/postgresql-co7
 
 To connect to your database with your newly created user:
 ```
-psql -U username -h $(docker inspect --format {{.NetworkSettings.IPAddress}} postgresql-co7) my_database
+psql -U username -h $(docker inspect --format {{.NetworkSettings.IPAddress}} postgresql) my_database
 ```
